@@ -14,7 +14,9 @@ A Tmux plugin for interacting with the Toggl time tracker
 
 ## Dependencies
 
-https://github.com/AuHau/toggl-cli
+* [Toggl CLI](https://github.com/AuHau/toggl-cli)
+
+* [fzf](https://github.com/junegunn/fzf)
 
 # Installation
 
