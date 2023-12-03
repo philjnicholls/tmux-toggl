@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TIME_ENTRY="$(toggl now | head -1 | sed -e 's/\s*#[[:digit:]]\+$//g')"
 

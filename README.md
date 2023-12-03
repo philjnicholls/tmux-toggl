@@ -43,10 +43,11 @@ set -g @plugin 'philjnicholls/tmux-toggl'
 The default configuration:
 
 ```bash
-set -g @tmux-toggl-extra-time-entries "" # Comma seperated list of time entry titles to add to the recent list (eg. "Live issues", "General")
+set -g @tmux-toggl-extra-time-entries "" # Comma seperated list of time entry titles to add to the recent list (eg. "Live issues,General")
 set -g @tmux-toggl-running-time-entry-key "T"
 set -g @tmux-toggl-start-recent-time-entry-key "t"
 set -g @tmux-toggl-send-keys-running-time-entry "l"
+set -g @tmux-toggl-daily-hours "7" # Number of hours used to create projected hours
 ```
 
 ## License
