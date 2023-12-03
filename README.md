@@ -50,6 +50,12 @@ set -g @tmux-toggl-send-keys-running-time-entry "l"
 set -g @tmux-toggl-daily-hours "7" # Number of hours used to create projected hours
 ```
 
+## References
+
+https://github.com/tmux-plugins
+https://github.com/tmux-plugins/tmux-example-plugin
+https://github.com/tmux-plugins/tmux-battery
+
 ## License
 
 [GNU GENERAL PUBLIC LICENSE](https://github.com/philjnicholls/tmux-toggl/blob/master/LICENSE.md)
