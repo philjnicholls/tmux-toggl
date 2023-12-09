@@ -10,7 +10,7 @@ A Tmux plugin for interacting with the Toggl time tracker
 
 ## Preview
 
-:construction: :construction: :construction:
+![Preview](https://github.com/philjnicholls/tmux-toggl/blob/master/demo.gif)
 
 ## Dependencies
 
