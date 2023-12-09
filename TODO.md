@@ -1,20 +1,3 @@
-# Done
-
-## 0.1
-
-* Configure bind keys
-* Don't send keys if no time entry running
-* Add a config for live issues, discussing tickets etc.
-* Add a dialog to select Project
-* Configurable projects
-
-## 0.2
-
-* Status bar display of current time log
-* Status bar display of logged hours in day, week and month for a project
-* Status bar display for projected hours for day, week and month (for a project?)
-* Make hours in a day configurable
-
 # Up next
 
 * Dialog to select project and then type a new time entry

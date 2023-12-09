@@ -10,3 +10,6 @@ get_tmux_option() {
     echo $option_value
   fi
 }
+
+OPTIONS=$(get_tmux_option "@tmux-toggl-togglcli-options" "")
+TOGGL="toggl $OPTIONS"

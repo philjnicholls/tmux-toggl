@@ -48,6 +48,7 @@ set -g @tmux-toggl-running-time-entry-key "T"
 set -g @tmux-toggl-start-recent-time-entry-key "t"
 set -g @tmux-toggl-send-keys-running-time-entry "l"
 set -g @tmux-toggl-daily-hours "7" # Number of hours used to create projected hours
+set -g @tmux-toggl-togglcli-options "" # Command line options for TogglCli
 ```
 
 ## References
