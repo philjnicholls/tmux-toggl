@@ -18,3 +18,7 @@
 ## 0.3
 
 * Configurable options for toggl-cli
+
+## 0.4
+
+* FIX broken starting a recent time entry from 0.3

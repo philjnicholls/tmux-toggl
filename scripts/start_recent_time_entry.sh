@@ -11,5 +11,6 @@ project=$(eval "$TOGGL projects ls -f name" | tail -n +2 | sed 's/^[ \t]*//;s/[ 
 time_entry=$(eval "$TOGGL ls -o \"$project\" -f description" | tail -n +2 | cat - <(printf "%s\n" "${EXTRA_ENTRIES[@]}") | sed 's/^[ \t]*//;s/[ \t]*$//' | awk '!x[$0]++' | fzf -m)
 
 if [ -n "$time_entry" ]; then
-	nohup bash -c '"$TOGGL" start -o "'"$project"'" "'"$time_entry"'" && "'"$CURRENT_DIR"'/running_time_entry.sh" &' >/dev/null 2>&1
+	COMMAND=''"$TOGGL"' start -o "'"$project"'" "'"$time_entry"'" && "'"$CURRENT_DIR"'/running_time_entry.sh" &'
+	nohup bash -c "$COMMAND" >/dev/null 2>&1
 fi
