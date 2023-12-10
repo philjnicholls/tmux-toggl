@@ -49,6 +49,7 @@ set -g @tmux-toggl-start-recent-time-entry-key "t"
 set -g @tmux-toggl-send-keys-running-time-entry "l"
 set -g @tmux-toggl-daily-hours "7" # Number of hours used to create projected hours
 set -g @tmux-toggl-togglcli-options "" # Command line options for TogglCli
+set -g @tmux-toggl-weekdays "01234" # List of weekdays that are considered working days for projected hours (0 = Mon, 1 = Tue etc.)
 ```
 
 ## References

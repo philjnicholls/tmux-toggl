@@ -4,22 +4,24 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/helpers.sh"
 
 DAILY_HOURS=$(get_tmux_option "@tmux-toggl-daily-hours" "7")
+WEEKDAYS=$(get_tmux_option "@tmux-toggl-weekdays" "01234")
 
 logged_hours=$($CURRENT_DIR/logged_month.sh)
 time_arr=(${logged_hours//:/ })
 # TODO We just throw away the minutes, we should use these to be more accurate
 hours=${time_arr[0]}
 
-days=$(python3 -c "
-import datetime
 
-start = datetime.date.today()
+days=$(weekdays="$WEEKDAYS" python3 -c "
+import datetime
+import os
+
+weekdays = {int(d) for d in os.environ['weekdays']}
+
+start = datetime.date.today() + datetime.timedelta(days=1)
 next_month = start.replace(day=28) + datetime.timedelta(days=4)
 end = next_month - datetime.timedelta(days=next_month.day)
-
-daydiff = end.weekday() - start.weekday()
-
-days = ((end-start).days - daydiff) / 7 * 5 + min(daydiff,5) - (max(end.weekday() - 4, 0) % 5)
+days = len([date for date in (start + datetime.timedelta(n) for n in range((end-start).days+1)) if date.weekday() in weekdays])
 print(int(days))")
 
 echo $((($days*$DAILY_HOURS)+$hours))

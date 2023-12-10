@@ -22,3 +22,8 @@
 ## 0.4
 
 * FIX broken starting a recent time entry from 0.3
+
+## 0.5
+
+* Add support for weekly logged hours starting on Sunday
+* FIX bad calculation of projected hours
