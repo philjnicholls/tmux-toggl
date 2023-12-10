@@ -27,3 +27,7 @@
 
 * Add support for weekly logged hours starting on Sunday
 * FIX bad calculation of projected hours
+
+## 0.6
+
+* FEATURE stop currently running time log
