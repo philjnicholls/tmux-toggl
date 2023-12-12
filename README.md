@@ -6,6 +6,7 @@ A Tmux plugin for interacting with the Toggl time tracker
 
 * Show the running time entry
 * Start a time entry from a list of recent time entries
+* Start a new free form time entry (Alt+Enter)
 * Type the running time entry into Tmux (great for writing emails, git branches, comments etc.)
 
 ## Preview
@@ -36,7 +37,7 @@ set -g @plugin 'philjnicholls/tmux-toggl'
 ### Default keybindings
 
 - `<tmux-prefix> T` to show the running time entry
-- `<tmux-prefix> t` to start a new time entry from a list of recent time entries
+- `<tmux-prefix> t` to start a new time entry from a list of recent time entries or a free form time entry
 - `<tmux-prefix> l` to type the running time entry into Tmux
 
 ## Configuration
@@ -46,7 +47,7 @@ The default configuration:
 ```bash
 set -g @tmux-toggl-extra-time-entries "" # Comma seperated list of time entry titles to add to the recent list (eg. "Live issues,General")
 set -g @tmux-toggl-running-time-entry-key "T"
-set -g @tmux-toggl-start-recent-time-entry-key "t"
+set -g @tmux-toggl-start-time-entry-key "t"
 set -g @tmux-toggl-send-keys-running-time-entry "l"
 set -g @tmux-toggl-stop-time-entry "S"
 set -g @tmux-toggl-daily-hours "7" # Number of hours used to create projected hours
