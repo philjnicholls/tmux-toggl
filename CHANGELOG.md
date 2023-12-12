@@ -31,3 +31,7 @@
 ## 0.6
 
 * FEATURE stop currently running time log
+
+## 0.7
+
+* Start a new timer
