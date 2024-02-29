@@ -11,17 +11,24 @@ time_arr=(${logged_hours//:/ })
 # TODO We just throw away the minutes, we should use these to be more accurate
 hours=${time_arr[0]}
 
-
-days=$(weekdays="$WEEKDAYS" python3 -c "
+function get_remaining {
+    python3 <(echo '
 import datetime
-import os
+import sys
 
-weekdays = {int(d) for d in os.environ['weekdays']}
+weekdays = {int(d) for d in sys.argv[1]}
 
 start = datetime.date.today() + datetime.timedelta(days=1)
-next_month = start.replace(day=28) + datetime.timedelta(days=4)
-end = next_month - datetime.timedelta(days=next_month.day)
-days = len([date for date in (start + datetime.timedelta(n) for n in range((end-start).days+1)) if date.weekday() in weekdays])
-print(int(days))")
+if start.month != datetime.date.today().month:
+    print(0)
+else:
+    next_month = start.replace(day=28) + datetime.timedelta(days=4)
+    end = next_month - datetime.timedelta(days=next_month.day)
+    days = len([date for date in (start + datetime.timedelta(n) for n in range((end-start).days+1)) if date.weekday() in weekdays])
+    print(int(days))
+    ') "$WEEKDAYS"
+}
+
+days=$(get_remaining)
 
 echo $((($days*$DAILY_HOURS)+$hours))

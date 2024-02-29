@@ -35,3 +35,7 @@
 ## 0.7
 
 * Start a new timer
+
+## 0.8
+
+* FIX Corrected calculation of remaining hours on last day of the month
