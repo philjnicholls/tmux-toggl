@@ -39,3 +39,7 @@
 ## 0.8
 
 * FIX Corrected calculation of remaining hours on last day of the month
+
+## 0.9
+
+* Added tmux-toggl-project option to have a fixed project
