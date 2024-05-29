@@ -43,3 +43,7 @@
 ## 0.9
 
 * Added tmux-toggl-project option to have a fixed project
+
+## 0.10
+
+* Fix for required end date in sum requests
