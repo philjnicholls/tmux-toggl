@@ -6,7 +6,7 @@ source "$CURRENT_DIR/helpers.sh"
 EXTRA_ENTRIES_OPTION=$(get_tmux_option "@tmux-toggl-extra-time-entries" "")
 IFS=',' read -r -a EXTRA_ENTRIES <<< "$EXTRA_ENTRIES_OPTION"
 
-project=$(get_tmux_option "@tmux-toggl-project", "")
+project=$(get_tmux_option "@tmux-toggl-project" "")
 
 if [ -z "$project" ]; then
   project=$(eval "$TOGGL projects ls -f name" | tail -n +2 | sed 's/^[ \t]*//;s/[ \t]*$//' | fzf -m)

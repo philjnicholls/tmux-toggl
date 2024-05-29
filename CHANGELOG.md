@@ -47,3 +47,7 @@
 ## 0.10
 
 * Fix for required end date in sum requests
+
+## 0.11
+
+* Fix typo causing fixed project to fail
