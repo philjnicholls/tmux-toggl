@@ -51,3 +51,7 @@
 ## 0.11
 
 * Fix typo causing fixed project to fail
+
+## 0.12
+
+* Fix zero hour bug

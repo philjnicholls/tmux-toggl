@@ -10,6 +10,9 @@ logged_hours=$($CURRENT_DIR/logged_month.sh)
 time_arr=(${logged_hours//:/ })
 # TODO We just throw away the minutes, we should use these to be more accurate
 hours=${time_arr[0]}
+if [ -z "${hours}" ]; then
+    hours=0
+fi
 
 function get_remaining {
     python3 <(echo '
