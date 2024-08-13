@@ -55,3 +55,7 @@
 ## 0.12
 
 * Fix zero hour bug
+
+## 0.13
+
+* Added lock files to prevent simultaneous toggl commands
