@@ -59,3 +59,7 @@
 ## 0.13
 
 * Added lock files to prevent simultaneous toggl commands
+
+## 0.14
+
+* Move lock files to /var/run
