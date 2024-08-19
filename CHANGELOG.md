@@ -63,3 +63,7 @@
 ## 0.14
 
 * Move lock files to /var/run
+
+## 0.15
+
+* Prevent shell locking for running time entry
