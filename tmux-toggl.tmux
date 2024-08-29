@@ -18,9 +18,9 @@ toggl_interpolation=(
   "\#{toggl-projected-hours}"
 )
 toggl_commands=(
-  "#(flock -n /run/lock/.tmux-toggl-logged-month.lock $CURRENT_DIR/scripts/logged_month.sh)"
-  "#(flock -n /run/lock/.tmux-toggl-logged-day.lock $CURRENT_DIR/scripts/logged_day.sh)"
-  "#(flock -n /run/lock/.tmux-toggl-projected-hours.lock $CURRENT_DIR/scripts/projected_hours.sh)"
+  "#(flock -n /run/lock/.tmux-toggl-logged-month.lock timeout 5 $CURRENT_DIR/scripts/logged_month.sh)"
+  "#(flock -n /run/lock/.tmux-toggl-logged-day.lock timeout 5 $CURRENT_DIR/scripts/logged_day.sh)"
+  "#(flock -n /run/lock/.tmux-toggl-projected-hours.lock timeout 5 $CURRENT_DIR/scripts/projected_hours.sh)"
 )
 
 set_tmux_option() {

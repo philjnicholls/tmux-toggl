@@ -58,8 +58,12 @@
 
 ## 0.13
 
-* Added lock files to prevent simultaneous toggl commands
+* Add lock files to prevent simultaneous toggl commands
 
 ## 0.14
 
 * Move lock files to /var/run
+
+## 0.15
+
+* Add timeout to toggl calls to prevent getting stuck when network changes
