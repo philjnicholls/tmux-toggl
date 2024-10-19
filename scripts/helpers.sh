@@ -12,4 +12,5 @@ get_tmux_option() {
 }
 
 OPTIONS=$(get_tmux_option "@tmux-toggl-togglcli-options" "")
-TOGGL="toggl $OPTIONS"
+TOGGL_PATH=$(get_tmux_option "@tmux-toggl-togglcli-path" "toggl")
+TOGGL="$TOGGL_PATH $OPTIONS"

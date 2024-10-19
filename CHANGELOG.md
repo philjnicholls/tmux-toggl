@@ -67,3 +67,7 @@
 ## 0.15
 
 * Add timeout to toggl calls to prevent getting stuck when network changes
+
+## 0.16
+
+* Add option to configure path to togglCli

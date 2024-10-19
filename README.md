@@ -54,6 +54,7 @@ set -g @tmux-toggl-daily-hours "7" # Number of hours used to create projected ho
 set -g @tmux-toggl-togglcli-options "" # Command line options for TogglCli
 set -g @tmux-toggl-weekdays "01234" # List of weekdays that are considered working days for projected hours (0 = Mon, 1 = Tue etc.)
 set -g @tmux-toggl-project "" # Set to a project name to always use the same project
+set -g @tmux-toggl-togglcli-path "toggl" # Path to the toggleCli executable
 ```
 
 ## References
