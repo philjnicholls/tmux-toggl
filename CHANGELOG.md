@@ -75,3 +75,7 @@
 ## 0.17
 
 * nohup running task
+
+## 0.18
+
+* Add recommended daily hours to meet monthly quota

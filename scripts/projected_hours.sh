@@ -33,5 +33,9 @@ else:
 }
 
 days=$(get_remaining)
+estimated_hours=$((($days*$DAILY_HOURS)+$hours))
+monthly_hours=$(($DAILY_HOURS*5*4))
+remaining_hours=$(($monthly_hours-$hours))
+required_daily=$((remaining_hours / days))
 
-echo $((($days*$DAILY_HOURS)+$hours))
+echo "$estimated_hours/$required_daily"
