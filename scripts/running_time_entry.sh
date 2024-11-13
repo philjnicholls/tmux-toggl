@@ -3,5 +3,5 @@
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/helpers.sh"
 
-MESSAGE=$(eval "$TOGGL now | head -1")
-tmux display-message "$MESSAGE"
+tmux run-shell -b "tmux display-message \"\$(eval \"$TOGGL now | head -1\")\""
+

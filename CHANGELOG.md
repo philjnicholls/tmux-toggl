@@ -71,3 +71,7 @@
 ## 0.16
 
 * Add option to configure path to togglCli
+
+## 0.17
+
+* nohup running task
