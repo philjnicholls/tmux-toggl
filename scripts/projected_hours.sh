@@ -36,6 +36,7 @@ days=$(get_remaining)
 estimated_hours=$((($days*$DAILY_HOURS)+$hours))
 monthly_hours=$(($DAILY_HOURS*5*4))
 remaining_hours=$(($monthly_hours-$hours))
-required_daily=$((remaining_hours / days))
+required_daily_hours=$((remaining_hours / days))
+required_daily_minutes=$((remaining_hours % days * 60 / days))
 
-echo "$estimated_hours/$required_daily"
+echo "$estimated_hours/$required_daily_hours:$required_daily_minutes"

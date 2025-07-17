@@ -79,3 +79,7 @@
 ## 0.18
 
 * Add recommended daily hours to meet monthly quota
+
+## 0.19
+
+* Add recommended minutes to meet monthly quota
