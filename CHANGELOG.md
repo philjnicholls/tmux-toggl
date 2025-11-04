@@ -83,3 +83,7 @@
 ## 0.19
 
 * Add recommended minutes to meet monthly quota
+
+## 0.2
+
+* Add caching to logged hours to reduce API calls

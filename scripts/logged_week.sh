@@ -5,5 +5,6 @@ source "$CURRENT_DIR/helpers.sh"
 
 DOW=$(($(date +%u)-1))
 START_OF_WEEK=$(date --date="${dataset_date} -${DOW} day" +%Y-%m-%d)
+CACHE_SECONDS=$(get_tmux_option "@tmux-toggl-cache-seconds" "600")
 
-get_cache "tmux-toggl-logged-week" 300 "$TOGGL sum -st -s \"$START_OF_WEEK\"" | head -2 | tail -1 | grep -Po "\d+:\d+"
+get_cache "tmux-toggl-logged-week" $CACHE_SECONDS "$TOGGL sum -st -s \"$START_OF_WEEK\"" | head -2 | tail -1 | grep -Po "\d+:\d+"
